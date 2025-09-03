@@ -85,8 +85,8 @@ public class BookController {
     }
 
     @GetMapping("/attach-download")
-    public void attachDownload(@RequestParam("bid") int bno, HttpServletResponse response) throws Exception {
-        Book book = bookService.getBook(bno);
+    public void attachDownload(@RequestParam("bid") int bid, HttpServletResponse response) throws Exception {
+        Book book = bookService.getBook(bid);
 
         String fileName = book.getBattachoname();
 
